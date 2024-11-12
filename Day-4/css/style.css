@@ -1,0 +1,30 @@
+
+.box-1{
+    /* Default value: content-box*/
+    box-sizing: content-box;
+    width: 500px;
+    height: 200px;
+    background-color: gainsboro;
+    padding: 50px;
+    border: 20px solid gold;
+}
+.box-2{
+    /* Default value: content-box*/
+    box-sizing: border-box;
+    width: 500px;
+    height: 200px;
+    background-color: gainsboro;
+    padding: 50px;
+    border: 20px solid gold;
+}
+/*Box-sizing: content-box kichs thức thật sự của phần tử khối hộp chiếm chỗ như sau
+width: width +padding=left+ padding-right + border
+height: height + padding-top + padding-bottom + border
+
+*/
+.btn-register{
+    padding: 12px 24px 12px 24px;
+    border: 2px solid goldenrod;
+    border-radius: 6px;
+    min-width: 60px;
+}

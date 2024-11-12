@@ -1,0 +1,24 @@
+*{
+    box-sizing: border-box;
+}
+.container{
+    background-color: antiquewhite;
+    display: flex;
+    /* gap:10px 20px; */
+    height: 400px;
+    /* flex-direction: row;
+    flex-wrap: wrap-reverse; */
+    flex-flow: row wrap;
+    /* row-gap: 10px;
+    column-gap: 20px; */
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+.item{
+    border: 1px solid red;
+    background-color: orange;
+    height: 100px;
+    width: 80px;
+    font-size: 24px;
+}

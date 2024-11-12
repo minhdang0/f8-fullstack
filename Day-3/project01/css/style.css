@@ -1,0 +1,68 @@
+body{
+    font-family: "Poppins", sans-serif;
+    background-color: #e5e5e5;
+}
+
+.user-card{
+    box-sizing: border-box;
+    margin: 100px auto;
+    text-align: center;
+    background-color: white;
+    width: 560px;
+    height: 607px;
+    justify-content: center;
+    border-radius: 5px;
+}
+.card-info{
+    display: flex;
+}
+.avatar{
+   padding: 50px 16px 50px 50px;
+}
+.avatar img{
+    border-radius: 99%;
+    width: 94px;
+    height: 94px;
+    object-fit: cover;
+    border: 10px solid #e6effa;
+}
+.info{
+    padding: 50px 50px 50px 0px;
+    text-align: left;
+}
+.user-name h3 {
+    font-size: 26px;
+    margin-bottom: 8px;
+}
+.user-name p{
+    font-size: 16px;
+}
+
+.review ul,li{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.icon{
+    width: 32px;
+    height: 32px;
+}
+
+.review li {
+    display: flex;
+    line-height: 32px;
+    text-align: center;
+}
+li >span {
+    margin: 4px;
+}
+.des p{
+    font-size: 16px;
+    margin-bottom: 28px;
+}
+button{
+    border: 2px solid #c4cadf;
+    border-radius: 2px;
+    padding:10px;
+    font-size: 16px ;
+}
