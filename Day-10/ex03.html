@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      a {
+        text-decoration: none;
+      }
+      ul,
+      li {
+        list-style: none;
+      }
+      .nav-inner ul {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+      }
+      a:hover {
+        font-weight: 600;
+        &::after {
+          content: "";
+          width: 50px;
+          height: 30px;
+          background-color: #000;
+        }
+      }
+      a:hover::after {
+        content: "";
+        background-color: black;
+        width: 100%;
+        height: 4px;
+        position: absolute;
+        bottom: -6px;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <nav class="nav-inner">
+      <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">Course</a></li>
+        <li><a href="">Pricing</a></li>
+        <li><a href="">Reviews</a></li>
+        <li><a href="">About Us</a></li>
+      </ul>
+    </nav>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic minus aliquam
+      ipsum aspernatur iusto repudiandae odio nemo maxime eius pariatur
+      consequatur voluptate, atque magni, ducimus dolor. Consequatur, expedita
+      quidem. Nostrum.
+    </p>
+  </body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+      }
+
+      .container {
+        width: 1170px;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        display: grid;
+        grid-template-areas:
+          "header header header"
+          "left-content right-content right-content"
+          "footer footer footer";
+        grid-auto-rows: 100px minmax(calc(100vh - 160px), 1fr) 60px;
+      }
+
+      .grid-item {
+        border: 1px dashed blue;
+        padding: 32px;
+      }
+
+      header {
+        grid-area: header;
+      }
+
+      .left-content {
+        grid-area: left-content;
+      }
+
+      .right-content {
+        grid-area: right-content;
+      }
+
+      .products-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 32px;
+        justify-content: flex-start;
+        align-items: center;
+      }
+
+      .product-item {
+        border: 1px solid red;
+        flex-shrink: 1;
+        flex-grow: 1;
+        flex-basis: 200px;
+      }
+
+      /* .product-item:last-child {
+				flex-grow: unset;
+			} */
+
+      footer {
+        grid-area: footer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header class="grid-item">Header</header>
+      <div class="left-content grid-item">Left content</div>
+      <div class="right-content grid-item">
+        <h2>Danh sach san pham</h2>
+        <div class="products-list">
+          <div class="product-item">item 1</div>
+          <div class="product-item">item 1</div>
+          <div class="product-item">item 1</div>
+          <div class="product-item">item 1</div>
+          <div class="product-item">item 1</div>
+          <div class="product-item">item 1</div>
+          <div class="product-item">item 1</div>
+        </div>
+      </div>
+      <footer class="grid-item">Footer</footer>
+    </div>
+  </body>
+</html>

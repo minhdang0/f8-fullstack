@@ -1,0 +1,36 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+	font-weight: 400;
+	font-family: "Poppins", serif;
+	color: #171100;
+}
+
+body {
+	font-size: 1.6rem;
+}
+.container {
+	padding-left: 12rem;
+	padding-right: 12rem;
+}
+
+.d-flex {
+	display: flex;
+}
+
+.justify-between {
+	justify-content: space-between;
+}
+
+.align-center {
+	align-items: center;
+}
+.btn {
+	color: #fff;
+	border-radius: 99px;
+	font-weight: 600;
+	transition: all ease-in-out 0.3s;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: grid;
+        border: 1px solid black;
+        grid-template-columns: 100px 3fr 1fr; /* cot1:100px cot2: chiếm 3 phần ty lệ trong không giang còn lại cot3: chiếm 1 phần tỷ lệ trong không gian còn lại */
+        grid-template-columns: repeat(
+          3,
+          1fr 2fr
+        ); /*Cấu trúc 6 cột, lặp lại ba lần cột 1fr cột 2 2fr */
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        grid-template-rows: repeat(5, 1fr);
+      }
+      .item {
+        border: 1px dashed black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item item-1">
+        Item-1 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+        Dolorum, labore?
+      </div>
+      <div class="item item-2">Item-2</div>
+      <div class="item item-3">Item-3</div>
+      <div class="item item-4">Item-4</div>
+      <div class="item item-5">Item-5</div>
+    </div>
+  </body>
+</html>

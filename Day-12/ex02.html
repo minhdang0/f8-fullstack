@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        border: 1px solid black;
+        grid-template-columns: repeat(4, 1fr);
+        display: grid;
+      }
+
+      .item {
+        border: 1px dashed red;
+        background-color: orange;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+      }
+      .item-1 {
+        grid-column-start: 1; /* Bắt đầu ở cột 1 */
+        grid-column-end: 3; /*Kết thúc ở trước cột 3 */
+      }
+      .item-2 {
+        grid-column-end: 5;
+        grid-column: 3/5; /* star 3 end 5 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item item-1">Item-1</div>
+      <div class="item item-2">Item-2</div>
+      <div class="item">Item-3</div>
+      <div class="item">Item-4</div>
+    </div>
+  </body>
+</html>

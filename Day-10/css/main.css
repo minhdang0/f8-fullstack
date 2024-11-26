@@ -1,0 +1,12 @@
+* {
+    color: bisque;
+}
+p {
+    color: black;
+}
+#pra {
+    color: greenyellow;
+}
+.pra {
+    color: yellow !important;
+}
