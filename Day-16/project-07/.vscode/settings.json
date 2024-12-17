@@ -1,0 +1,12 @@
+{
+	"workbench.settings.editor": "ui",
+	"liveServer.settings.AdvanceCustomBrowserCmdLine": "",
+	"liveSassCompile.settings.formats": [
+		{
+			"format": "expanded",
+			"extensionName": ".css",
+			"savePath": "/assets/css",
+			"savePathReplacementPairs": null
+		}
+	]
+}

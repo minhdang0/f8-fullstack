@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+.container {
+    width: 1140px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header,
+footer {
+    padding: 40px 0px;
+    background-color: #000;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+ul {
+    display: flex;
+    gap: 10px;
+}
+
+li {
+    border: 1px solid #fff;
+    width: auto;
+    padding: 12px 24px;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+ul > li:hover {
+    background-color: #DDDDDD;
+}
+
+ul > li:hover a {
+    color: #000;
+}

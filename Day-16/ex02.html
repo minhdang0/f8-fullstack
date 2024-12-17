@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 1140px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+      .text-center {
+        text-align: center;
+      }
+      .row {
+        display: grid;
+        grid-auto-rows: minmax(100px, 1fr);
+      }
+      .g-0,
+      .gx-0 {
+        column-gap: 0px;
+      }
+      .g-1,
+      .gx-1 {
+        column-gap: 0.25rem;
+      }
+
+      .g-2,
+      .gx-2 {
+        column-gap: 0.5rem;
+      }
+      .g-3,
+      .gx-3 {
+        column-gap: 0.75rem;
+      }
+      .g-4,
+      .gx-4 {
+        column-gap: 1.5rem;
+      }
+      .g-5,
+      .gx-5 {
+        column-gap: 3rem;
+      }
+
+      .g-0,
+      .gy-0 {
+        row-gap: 0rem;
+      }
+
+      .g-1,
+      .gy-1 {
+        row-gap: 0.25rem;
+      }
+
+      .g-2,
+      .gy-2 {
+        row-gap: 0.5rem;
+      }
+
+      .g-3,
+      .gy-3 {
+        row-gap: 0.75rem;
+      }
+      .g-4,
+      .gy-4 {
+        row-gap: 1.5rem;
+      }
+      .g-5,
+      .gy-5 {
+        row-gap: 3em;
+      }
+      .row-columns-1 {
+        grid-template-columns: 1fr;
+      }
+
+      .row-columns-2 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .row-columns-3 {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .row-columns-4 {
+        grid-template-columns: repeat(4, 1fr);
+      }
+      .row-columns-5 {
+        grid-template-columns: repeat(5, 1fr);
+      }
+      .row-columns-6 {
+        grid-template-columns: repeat(6, 1fr);
+      }
+      .item {
+        background-color: greenyellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row row-columns-6 gx-5 text-center gy-5">
+        <div class="item">item</div>
+        <div class="item">item</div>
+        <div class="item">item</div>
+        <div class="item">item</div>
+        <div class="item">item</div>
+        <div class="item">item</div>
+        <div class="item">item</div>
+        <div class="item">item</div>
+        <div class="item">item</div>
+        <div class="item">item</div>
+      </div>
+    </div>
+  </body>
+</html>

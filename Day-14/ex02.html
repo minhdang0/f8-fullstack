@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page với AOS</title>
+
+    <!-- CSS của AOS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css"
+    />
+
+    <!-- CSS tùy chỉnh -->
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        font-family: "Arial", sans-serif;
+        scroll-behavior: smooth;
+      }
+
+      /* Kiểu cho header */
+      header {
+        background-color: #333;
+        color: white;
+        padding: 20px;
+        text-align: center;
+      }
+
+      header h1 {
+        font-size: 3em;
+        margin: 0;
+      }
+
+      /* Kiểu cho các phần */
+      section {
+        padding: 60px 20px;
+        text-align: center;
+        background-color: #f4f4f4;
+        margin-bottom: 20px;
+      }
+
+      section:nth-child(even) {
+        background-color: #e0e0e0;
+      }
+
+      h2 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: 1.2em;
+        color: #666;
+        max-width: 700px;
+        margin: 0 auto 40px;
+      }
+
+      .cta {
+        padding: 15px 30px;
+        background-color: #ff6347;
+        color: white;
+        font-size: 1.5em;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+
+      .cta:hover {
+        background-color: #ff4500;
+      }
+
+      /* Kiểu cho phần dịch vụ */
+      .services {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+      }
+
+      .service-item {
+        background-color: white;
+        padding: 30px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 30%;
+        margin: 20px 0;
+        border-radius: 8px;
+        transition: transform 0.3s ease;
+      }
+
+      .service-item:hover {
+        transform: translateY(-10px);
+      }
+
+      .service-item img {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 20px;
+      }
+
+      /* Footer */
+      footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 30px 0;
+      }
+
+      footer p {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header data-aos="fade-down">
+      <h1>Chào mừng đến với Landing Page</h1>
+    </header>
+
+    <!-- Phần giới thiệu -->
+    <section data-aos="fade-up">
+      <h2>Giới thiệu</h2>
+      <p>
+        Chúng tôi cung cấp giải pháp tốt nhất để giúp bạn phát triển doanh
+        nghiệp của mình với các dịch vụ hàng đầu.
+      </p>
+      <a href="#services" class="cta" data-aos="zoom-in">Khám phá dịch vụ</a>
+    </section>
+
+    <!-- Phần dịch vụ -->
+    <section id="services">
+      <h2 data-aos="fade-right">Dịch vụ của chúng tôi</h2>
+      <div class="services">
+        <!-- Service 1 -->
+        <div class="service-item" data-aos="flip-left" data-aos-delay="100">
+          <img src="https://via.placeholder.com/80" alt="Dịch vụ 1" />
+          <h3>Thiết kế Web</h3>
+          <p>
+            Chúng tôi tạo ra các trang web đẹp mắt, chuyên nghiệp, tương thích
+            với mọi thiết bị.
+          </p>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service-item" data-aos="flip-right" data-aos-delay="200">
+          <img src="https://via.placeholder.com/80" alt="Dịch vụ 2" />
+          <h3>Phát triển ứng dụng</h3>
+          <p>
+            Ứng dụng di động chất lượng cao, đảm bảo hiệu suất và trải nghiệm
+            người dùng tối ưu.
+          </p>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service-item" data-aos="flip-left" data-aos-delay="300">
+          <img src="https://via.placeholder.com/80" alt="Dịch vụ 3" />
+          <h3>SEO & Marketing</h3>
+          <p>
+            Chiến lược tiếp thị và tối ưu hóa công cụ tìm kiếm giúp doanh nghiệp
+            bạn nổi bật.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Phần phản hồi khách hàng -->
+    <section data-aos="fade-up">
+      <h2>Khách hàng nói gì?</h2>
+      <p>
+        "Chúng tôi rất hài lòng với dịch vụ và hỗ trợ của công ty. Các dự án
+        được hoàn thành đúng thời hạn và chất lượng vượt trội."
+      </p>
+      <p>
+        "Nhờ có chiến lược marketing chuyên nghiệp, doanh thu của chúng tôi đã
+        tăng trưởng mạnh mẽ!"
+      </p>
+    </section>
+
+    <!-- Kêu gọi hành động -->
+    <section data-aos="fade-down">
+      <h2>Bắt đầu ngay hôm nay</h2>
+      <p>
+        Liên hệ với chúng tôi để được tư vấn miễn phí và nhận những giải pháp
+        tốt nhất cho doanh nghiệp của bạn.
+      </p>
+      <a href="#contact" class="cta" data-aos="zoom-in">Liên hệ ngay</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2024 Công ty của bạn. Mọi quyền được bảo lưu.</p>
+    </footer>
+
+    <!-- JS của AOS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      // Khởi tạo AOS
+      AOS.init({
+        duration: 1000, // Thời gian thực hiện hiệu ứng (ms)
+        offset: 120, // Khoảng cách cuộn (px)
+        once: false, // Hiệu ứng chỉ chạy một lần
+      });
+    </script>
+  </body>
+</html>

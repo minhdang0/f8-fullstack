@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        position: relative;
+        padding: 24px;
+      }
+      .container-inner {
+        width: 500px;
+        height: 300px;
+        border: 2px solid red;
+        transition: all ease-in-out 0.3s;
+      }
+      .container-inner:hover {
+        transform: skew(45deg);
+      }
+      .item {
+        border: 1px solid blue;
+        width: calc(300px - 40px);
+        position: absolute;
+        top: 50px;
+        left: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="container-inner"></div>
+      <div class="item">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam,
+        praesentium.
+      </div>
+    </div>
+  </body>
+</html>

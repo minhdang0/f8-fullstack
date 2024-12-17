@@ -1,0 +1,205 @@
+* {
+    box-sizing: border-box;
+}
+
+/* :root {
+} */
+
+.g-0,
+.gx-0 {
+	--gutter-x: 0;
+}
+
+.g-0,
+.gy-0{
+    --gutter-y:0;
+}
+
+.g-1,
+.gx-1 {
+	--gutter-x: 0.25rem;
+}
+
+.g-1,
+.gy-1 {
+    --gutter-y:0.25rem;
+}
+
+.g-2,
+.gx-2 {
+	--gutter-x: 0.5rem;
+}
+
+.g-2,
+.gy-2 {
+	--gutter-y: 0.5rem;
+}
+
+.g-3,
+.gx-3 {
+	--gutter-x: 1rem;
+}
+
+.g-3,
+.gy-3 {
+    --gutter-y: 0.5rem;
+}
+
+.g-4,
+.gx-4 {
+	--gutter-x: 1.5rem;
+}
+
+.g-4,
+.gy-4 {
+	--gutter-y: 1.5rem;
+}
+
+.g-5,
+.gx-5 {
+	--gutter-x: 3rem;
+}
+
+.g-5,
+.gy-5 {
+	--gutter-y: 3rem;
+}
+.container {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    border: 2px solid red;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+.text-center {
+    align-items: center;
+}
+.mt-0 {
+    margin-top: 0 !important;
+}
+
+.mt-1 {
+    margin-top: 0.25rem !important;
+}
+
+.mt-2 {
+    margin-top: 0.5rem !important;
+}
+
+.mt-3 {
+    margin-top: 1rem !important;
+}
+
+.mt-4 {
+    margin-top: 1.5rem !important;
+}
+
+.mt-5 {
+    margin-top: 3rem !important;
+}
+
+.mt-auto {
+    margin-top: auto !important;
+}
+
+.p-0 {
+    padding: 0 !important;
+}
+
+.p-1 {
+    padding: 0.25rem !important;
+}
+
+.p-2 {
+    padding: 0.5rem !important;
+}
+
+.p-3 {
+    padding: 1rem !important;
+}
+
+.p-4 {
+    padding: 1.5rem !important;
+}
+
+.p-5 {
+    padding: 3rem !important;
+}
+
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(var(--gutter-x) *-0.5);
+    margin-right: calc(var(--gutter-x) *-0.5);
+    margin-top: calc(-1 * var(--gutter-y));
+}
+
+.row > * {
+   padding-left: calc(var(--gutter-x) *0.5);
+   padding-right: calc(var(--gutter-x) *0.5);
+}
+
+.col {
+    flex: 1 0 0%;
+    background-color: yellow;
+}
+
+.item {
+    background-color: greenyellow;
+}
+
+.col-1 {
+    flex:  0 0 auto;
+    width: calc(1 * 100% / 12);
+}
+
+.col-2 {
+    flex:  0 0 auto;
+    width: calc(2 * 100% / 12);
+}
+.col-3 {
+    flex:  0 0 auto;
+    width: calc(3 * 100% / 12);
+}
+.col-4 {
+    flex:  0 0 auto;
+    width: calc(4 * 100% / 12);
+}
+.col-5 {
+    flex:  0 0 auto;
+    width: calc(5 * 100% / 12);
+}
+.col-6 {
+    flex:  0 0 auto;
+    width: calc(6 * 100% / 12);
+}
+
+.col-7 {
+    flex:  0 0 auto;
+    width: calc(7 * 100% / 12);
+}
+
+.col-8 {
+    flex:  0 0 auto;
+    width: calc(8 * 100% / 12);
+}
+.col-9 {
+    flex:  0 0 auto;
+    width: calc(9 * 100% / 12);
+}
+.col-10 {
+    flex:  0 0 auto;
+    width: calc(10 * 100% / 12);
+}
+.col-11 {
+    flex:  0 0 auto;
+    width: calc(11 * 100% / 12);
+}
+.col-12 {
+    flex:  0 0 auto;
+    width: calc(12 * 100% / 12);
+}

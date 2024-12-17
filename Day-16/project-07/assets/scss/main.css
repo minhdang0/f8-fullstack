@@ -1,0 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+
+header {
+  min-height: 100px;
+}
+
+nav ul {
+  display: flex;
+}/*# sourceMappingURL=main.css.map */

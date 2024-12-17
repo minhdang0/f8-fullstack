@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .sale {
+        width: 100%;
+        background-color: #000;
+        color: #fff;
+        padding: 12px 0px;
+      }
+      .sale p {
+        width: 100%;
+        white-space: nowrap;
+        animation: move 10s linear 0s infinite;
+      }
+
+      @keyframes move {
+        0% {
+          transform: translateX(-100%);
+          color: aliceblue;
+        }
+
+        100% {
+          transform: translateX(100%);
+          color: antiquewhite;
+        }
+      }
+
+      
+    </style>
+  </head>
+  <body>
+    <div class="sale">
+      <p>
+        Giảm giá đồng loạt từ 50k đến 200k các sản phẩm thu đông nhân dịp khai
+        trương
+      </p>
+    </div>
+  </body>
+</html>
