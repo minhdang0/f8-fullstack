@@ -1,81 +1,81 @@
-const memberK11 = ["Đức Anh", "Việt Anh", "Minh", "Phong", "Thắng", "Trung", "Đăng", "Phong"];
+// const memberK11 = ["Đức Anh", "Việt Anh", "Minh", "Phong", "Thắng", "Trung", "Đăng", "Phong"];
 
-memberK11.unshift("ABC");
-console.log(memberK11[0]);
+// memberK11.unshift("ABC");
+// console.log(memberK11[0]);
 
-/** 
- * UNSHIFT :thêm phần tử vào đầu mảng
- * 1.Có thay đổi mảng gốc
- * 2. Trả vêf độ dài của mảng
- * SHIFT : bớt phần tử vào đầu mảng
- * 1.Có thay đổi mảng gốc
- * 2. Trả về phần tử vùa bị xóa
- */
+// /** 
+//  * UNSHIFT :thêm phần tử vào đầu mảng
+//  * 1.Có thay đổi mảng gốc
+//  * 2. Trả vêf độ dài của mảng
+//  * SHIFT : bớt phần tử vào đầu mảng
+//  * 1.Có thay đổi mảng gốc
+//  * 2. Trả về phần tử vùa bị xóa
+//  */
+    
+// memberK11.unshift("X", "Y", {username: "F8"});
+// console.log(memberK11);
 
-memberK11.unshift("X", "Y", {username: "F8"});
-console.log(memberK11);
+// memberK11.shift();
+// console.log(memberK11);
 
-memberK11.shift();
-console.log(memberK11);
+// const list = [1,2,3,4,5];
+// console.log(list.shift());
+// console.log(list);
 
-const list = [1,2,3,4,5];
-console.log(list.shift());
-console.log(list);
+// list.push("Hoàng");
+// console.log(list);
 
-list.push("Hoàng");
-console.log(list);
+// list.pop()
+// console.log(list.pop());
+// /**
+//  * PUSH :thêm ptu vào cuối mảng
+//  * 1.Có thay đổi mảng gốc
+//  * 2. Trả vêf độ dài của mảng
+//  * POP : Xóa phần tử cuối mảng
+//  *  1.Có thay đổi mảng gốc
+//  * 2. Trả về phần tử vừa bị xóa
+//  */
 
-list.pop()
-console.log(list.pop());
-/**
- * PUSH :thêm ptu vào cuối mảng
- * 1.Có thay đổi mảng gốc
- * 2. Trả vêf độ dài của mảng
- * POP : Xóa phần tử cuối mảng
- *  1.Có thay đổi mảng gốc
- * 2. Trả về phần tử vừa bị xóa
- */
+// const user = [
+//     {fullname: "Nguyen Van A", age : 20},
+//     {fullname: "Nguyen Van B", age : 22},
+//     {fullname: "Nguyen Van C", age : 21},
+//     {fullname: "Nguyen Van D", age : 19},
+//     {fullname: "Nguyen Van E", age : 19},
+// ]
 
-const user = [
-    {fullname: "Nguyen Van A", age : 20},
-    {fullname: "Nguyen Van B", age : 22},
-    {fullname: "Nguyen Van C", age : 21},
-    {fullname: "Nguyen Van D", age : 19},
-    {fullname: "Nguyen Van E", age : 19},
-]
+// const x = Math.ceil(user.length / 2);
+// let y = user.length;
 
-const x = Math.ceil(user.length / 2);
-let y = user.length;
+// for (let i = 0; i < x; i++) {
+//     // console.log(user[i], user[y - 1]);   
+//     let temp = user[i];
+//     user[i] = user[y - 1];
+//     user[y - 1] = temp;
+//     console.log(user[i], user[y - 1]);  
+//     y--;
+// }
+// console.log(user);
 
-for (let i = 0; i < x; i++) {
-    // console.log(user[i], user[y - 1]);   
-    let temp = user[i];
-    user[i] = user[y - 1];
-    user[y - 1] = temp;
-    console.log(user[i], user[y - 1]);  
-    y--;
-}
-console.log(user);
+// const newUsers3 = [];
+// for (let i = 0; i < user.length; i++) {
+// if (user[i].age >= 20) {
+// newUsers3.push(user[i]);
+// }
+// }
+// console.log(newUsers3);
 
-const newUsers3 = [];
-for (let i = 0; i < user.length; i++) {
-if (user[i].age >= 20) {
-newUsers3.push(user[i]);
-}
-}
-console.log(newUsers3);
-
-// const usersGroupByAddress = {
-//     BacGiang: [{ fullname: "Nguyen Van B", age: 22, address: "BacGiang" }],
-//     LangSon: [
-//     { fullname: "Nguyen Van A", age: 20, address: "LangSon" },
-//     { fullname: "Nguyen Van E", age: 32, address: "LangSon" },
-//     ],
-//     HaNoi: [
-//     { fullname: "Nguyen Van C", age: 21, address: "HaNoi" },
-//     { fullname: "Nguyen Van D", age: 18, address: "HaNoi" },
-//     ],
-// };
+// // const usersGroupByAddress = {
+// //     BacGiang: [{ fullname: "Nguyen Van B", age: 22, address: "BacGiang" }],
+// //     LangSon: [
+// //     { fullname: "Nguyen Van A", age: 20, address: "LangSon" },
+// //     { fullname: "Nguyen Van E", age: 32, address: "LangSon" },
+// //     ],
+// //     HaNoi: [
+// //     { fullname: "Nguyen Van C", age: 21, address: "HaNoi" },
+// //     { fullname: "Nguyen Van D", age: 18, address: "HaNoi" },
+// //     ],
+// // };
 const users = [
     { fullname: "Nguyen Van A", age: 20, address: "LangSon" },
     { fullname: "Nguyen Van B", age: 22, address: "BacGiang" },
