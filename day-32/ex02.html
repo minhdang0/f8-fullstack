@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form
+      id="register-form"
+      action="https://api-gateway.fullstack.edu.vn/action_page.php"
+      method="post"
+    >
+      <div class="form-gruop">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="Email" />
+      </div>
+      <div class="form-gruop">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Password"
+        />
+      </div>
+      <button>Submit</button>
+    </form>
+    <script>
+      // Cach 1 form data
+      const registerForm = document.getElementById("register-form");
+      registerForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const formData = new FormData(registerForm);
+        console.log({ formData });
+        const data = Object.fromEntries(formData);
+        console.log({ data });
+      });
+
+      // Cach 2 Truy van Element node
+    </script>
+  </body>
+</html>

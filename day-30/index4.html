@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .d-none {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="toggleForm2()">Register</button>
+    <form action="" id="registerForm" class="d-none">
+      <h2>Dang ky</h2>
+    </form>
+
+    <form action="" id="loginForm">
+      <h2>Dang Nhap</h2>
+    </form>
+
+    <script>
+      const login = document.getElementById("loginForm");
+      const register = document.getElementById("registerForm");
+      const button = document.getElementsByTagName("button")[0];
+
+      const toggleForm = () => {
+        if (register.classList.contains("d-none")) {
+          login.classList.add("d-none");
+          register.classList.remove("d-none");
+          button.textContent = "Login";
+        } else {
+          register.classList.add("d-none");
+          login.classList.remove("d-none");
+          button.textContent = "Register";
+        }
+      };
+
+      const toggleForm2 = () => {
+        login.classList.toggle("d-none");
+        register.classList.toggle("d-none");
+
+        login.classList.contains("d-none")
+          ? (button.textContent = "Login")
+          : (button.textContent = "Register");
+      };
+      /**
+      */
+    </script>
+  </body>
+</html>

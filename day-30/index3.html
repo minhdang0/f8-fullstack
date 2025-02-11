@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .d-none {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <p class="content">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe dicta
+        iusto expedita, quidem est necessitatibus molestiae, eveniet suscipit
+        nesciunt nam nobis beatae pariatur? Temporibus, modi reiciendis. Dolorem
+        inventore doloremque fuga!
+      </p>
+      <button onclick="toggleButton2()">Show/hide</button>
+    </div>
+    <script>
+      let contentElement = document.getElementsByClassName("content")[0];
+
+      const toggleButton = () => {
+        contentElement.classList.contains("d-none")
+          ? contentElement.classList.remove("d-none")
+          : contentElement.classList.add("d-none");
+      };
+
+      const toggleButton2 = () => {
+        contentElement.classList.toggle("d-none");
+      };
+    </script>
+  </body>
+</html>
