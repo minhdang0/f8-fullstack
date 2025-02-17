@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+form {
+  width: 400px;
+  margin:  100px auto 0;
+  padding: 40px;
+  border: 1px solid #ccc;
+  border-radius:  8px;
+  
+}
+header {
+  position: fixed;
+  top:10px;
+  width: 1170px;
+  margin: 0  auto;
+}
+header > ul  {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style: none;
+  gap: 20px;
+}
+header > ul >li {
+  width: 100px;
+  height: auto;
+  background-color: #54BAB9;
+  text-align: center;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+li:hover {
+  opacity: 0.8;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}

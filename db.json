@@ -1,0 +1,52 @@
+{
+  "tasks": [
+    {
+      "title": "123",
+      "status": "todo",
+      "priority": "1",
+      "id": 1
+    },
+    {
+      "title": "cong viec 1",
+      "status": "doing",
+      "priority": "1",
+      "id": 2
+    },
+    {
+      "title": "123",
+      "status": "doing",
+      "priority": "1",
+      "id": 3
+    },
+    {
+      "title": "cong viec 1",
+      "status": "todo",
+      "priority": "1",
+      "id": 4
+    },
+    {
+      "title": "cong viec 1",
+      "status": "doing",
+      "priority": "1",
+      "id": 5
+    },
+    {
+      "title": "cong viec 2",
+      "status": "todo",
+      "priority": "2",
+      "id": 6
+    }
+  ],
+  "users": [
+    {
+      "email": "user10@gmail.com",
+      "password": "$2a$10$V7bYrB9fOU6DXKFLgJxaUeC9b2cYSHMvCJYolLg2olDbbnq1PH8.q",
+      "id": 1
+    },
+    {
+      "email": "user1q0@gmail.com",
+      "password": "$2a$10$t/Zw4CA.xsRoFJbGF8Pl7.KIhmZqTZc4kEZd/F9iysmaJY8oz9jza",
+      "id": 2
+    }
+  ]
+}

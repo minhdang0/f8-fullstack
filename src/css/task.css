@@ -1,0 +1,151 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+
+thead {
+    background: #54BAB9;
+    color: #ffffff;
+    text-align: left;
+}
+
+thead th {
+    padding: 12px;
+    font-size: 16px;
+}
+
+tbody tr {
+    border-bottom: 1px solid #ddd;
+    transition: background 0.2s;
+}
+
+tbody tr:hover {
+    background: #f1f1f1;
+}
+
+tbody td {
+    padding: 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+button {
+    padding: 6px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 0 5px;
+    transition: 0.2s;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+button:first-child {  
+    background: #ffc107;
+    color: #000;
+}
+
+button:last-child {  
+    background: #dc3545;
+    color: #fff;
+}
+
+table,
+th,
+td {
+    border-radius: 8px;
+}
+
+.title {
+    margin: 100px auto;
+    text-align: center;
+}
+
+.tasks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+    width: 1170px;
+    margin: 0 auto;
+}
+#add-task-btn {
+    width: 110px;
+    height: auto;
+    border: none;
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+}
+button:hover {
+    opacity: 0.8;
+}
+
+.modal {
+    display: none; 
+    z-index: 1000; 
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+
+.modal-content {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    position: relative;
+}
+
+.modal-content h2 {
+    margin-bottom: 15px;
+    font-size: 22px;
+    color: #333;
+}
+
+.modal-content label {
+    display: block;
+    text-align: left;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+
+.modal-content input,
+.modal-content select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.modal-content button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    margin: 10px 5px;
+    transition: 0.3s;
+}
