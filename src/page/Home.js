@@ -1,3 +1,4 @@
+import "../css/home.css"
 function Home () {
     return /*html*/`
     <div id="user_info">
