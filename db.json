@@ -2,19 +2,7 @@
   "tasks": [
     {
       "title": "123",
-      "status": "todo",
-      "priority": "1",
-      "id": 1
-    },
-    {
-      "title": "cong viec 1",
-      "status": "doing",
-      "priority": "1",
-      "id": 2
-    },
-    {
-      "title": "123",
-      "status": "doing",
+      "status": "done",
       "priority": "1",
       "id": 3
     },
@@ -25,16 +13,34 @@
       "id": 4
     },
     {
-      "title": "cong viec 1",
-      "status": "doing",
-      "priority": "1",
-      "id": 5
-    },
-    {
       "title": "cong viec 2",
       "status": "todo",
       "priority": "2",
       "id": 6
+    },
+    {
+      "title": "",
+      "status": "todo",
+      "priority": "1",
+      "id": 7
+    },
+    {
+      "title": "cong viec 1",
+      "status": "done",
+      "priority": "2",
+      "id": 8
+    },
+    {
+      "title": "",
+      "status": "todo",
+      "priority": "1",
+      "id": 9
+    },
+    {
+      "title": "cong viec 1",
+      "status": "doing",
+      "priority": "2",
+      "id": 10
     }
   ],
   "users": [

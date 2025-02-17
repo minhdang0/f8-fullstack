@@ -3,10 +3,19 @@ function manageTask () {
     return /*html*/ `
     <div class="title">
         <h1>PERSONAL TASK MANAGER</h1>
-        
     </div>
     <div class="tasks">
         <button id="add-task-btn">Add Task</button>
+        <div id="filter">
+            <div class="filter-status">
+                <select id="status-choose" name="status">
+                    <option value="all">--All--</option>
+                    <option value="todo">Todo</option>
+                    <option value="doing">Doing</option>
+                    <option value="done">Done</option>
+                </select>
+            </div>
+        </div>
         <table border="1">
             <thead>
                 <tr>

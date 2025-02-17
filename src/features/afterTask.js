@@ -14,10 +14,16 @@ function afterTask() {
     function renderTasks(tasks) {
         const taskList = document.getElementById('task-list');
         taskList.innerHTML = '';
-        tasks.forEach(task => {
+
+        const statusElement = document.getElementById("status-choose").value;
+        const filterTasks = tasks.filter(task => {
+            if (statusElement === "all") return true;
+            else return task.status === statusElement;
+        })
+        filterTasks.forEach((task,index) => {
             taskList.innerHTML += `
-                <tr>
-                    <td>${task.id}</td>
+                <tr style="background-color: ${task.status === 'done' ? 'yellowgreen' : '#fff'}">
+                    <td>${index +1}</td>
                     <td>${task.title}</td>
                     <td>${task.status}</td>
                     <td>${task.priority}</td>
@@ -30,7 +36,7 @@ function afterTask() {
         });
     }
 
-    const userInfo = JSON.parse(localStorage.getItem("users") || "{}");
+    const userInfo = JSON.parse(localStorage.getItem("user") || "{}");
     const userId = userInfo?.id;
 
     function addTask() {
@@ -110,7 +116,12 @@ function afterTask() {
         document.getElementById('task-modal').style.display = 'none';
     }
 
-    document.getElementById('add-task-btn').addEventListener('click', openTaskModal);
+   
+    document.getElementById('add-task-btn').addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        openTaskModal() 
+    });
     document.getElementById('save-task-btn').addEventListener('click', function() {
         if (editingTaskId) {
             updateTask(); 
