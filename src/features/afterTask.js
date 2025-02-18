@@ -15,12 +15,7 @@ function afterTask() {
         const taskList = document.getElementById('task-list');
         taskList.innerHTML = '';
 
-        const statusElement = document.getElementById("status-choose").value;
-        const filterTasks = tasks.filter(task => {
-            if (statusElement === "all") return true;
-            else return task.status === statusElement;
-        })
-        filterTasks.forEach((task,index) => {
+        tasks.forEach((task,index) => {
             taskList.innerHTML += `
                 <tr style="background-color: ${task.status === 'done' ? 'yellowgreen' : '#fff'}">
                     <td>${index +1}</td>
@@ -35,7 +30,22 @@ function afterTask() {
             `;
         });
     }
-
+    function filterTask() {
+        const statusElement = document.getElementById("status").value;
+        console.log(statusElement);
+        
+        fetch(API_URL, {
+            method: 'GET',
+            headers: { 'Authorization': `Bearer ${TOKEN}` }
+        }).then(response => response.json())
+        .then(tasks => {
+            const taskFiltered = tasks.filter(task => {
+                if(statusElement === "all") return true;
+                else return task.status === statusElement;
+            })
+            renderTasks(taskFiltered);
+        }).catch(error => console.log(error));
+    }
     const userInfo = JSON.parse(localStorage.getItem("user") || "{}");
     const userId = userInfo?.id;
 
@@ -129,12 +139,15 @@ function afterTask() {
             addTask(); 
         }
     });
-
+    document.getElementById('status').addEventListener("change", () => {
+        filterTask();
+    })
     fetchTasks();
 
     window.closeTaskModal = closeTaskModal;
     window.deleteTask = deleteTask;
     window.editTask = editTask;
+    
 }
 
 export default afterTask;

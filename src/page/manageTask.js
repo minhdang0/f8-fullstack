@@ -8,7 +8,7 @@ function manageTask () {
         <button id="add-task-btn">Add Task</button>
         <div id="filter">
             <div class="filter-status">
-                <select id="status-choose" name="status">
+                <select id="status" name="status">
                     <option value="all">--All--</option>
                     <option value="todo">Todo</option>
                     <option value="doing">Doing</option>
