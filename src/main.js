@@ -12,7 +12,7 @@ import afterRegister from './features/afterRegister';
 import afterLogin from './features/afterLogin';
 import afterTask from './features/afterTask';
 
-const router = new Navigo("/");
+export const router = new Navigo("/");
 
 
 

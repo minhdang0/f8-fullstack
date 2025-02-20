@@ -95,24 +95,24 @@ button:hover {
 .modal {
     display: none; 
     z-index: 1000; 
-    position: absolute;
-    top: 0%;
-    left: 0%;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
     background-color: rgba(0, 0, 0, 0.5); 
-    display: flex;
-    justify-content: center;
-    align-items: center;
     border: none;
 }
 
 .modal-content {
-    background: #ffffff;
+    background: #fff;
     padding: 20px;
     border-radius: 10px;
     width: 400px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     text-align: center;
-    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .modal-content h2 {

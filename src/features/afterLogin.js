@@ -1,3 +1,5 @@
+import { login } from "../api/auth";
+import { router } from "../main";
 function afterLogin () {
     console.log("Login access");
     const validateEmail = (email) => {
@@ -6,13 +8,13 @@ function afterLogin () {
     }
 
     const formLogin = document.getElementById("login");
-    formLogin.addEventListener("submit", (e) => {
+    formLogin.addEventListener("submit", async (e) => {
         e.preventDefault();
         const formData = new FormData(formLogin);
         const userInfo = Object.fromEntries(formData);
         
-        const emailInput = formLogin.querySelector("[name='email']");
-        const passwordInput = formLogin.querySelector("[name='password");
+        const emailInput = formLogin.querySelector("[name='email']").value;
+        const passwordInput = formLogin.querySelector("[name='password").value;
 
         if(!validateEmail(userInfo.email)) {
             alert("Email khong hop le");
@@ -25,28 +27,15 @@ function afterLogin () {
             passwordInput.focus();
             return;
         }
-        fetch("http://localhost:3000/login",{
-            headers: {
-                "Content-Type":"application/json"
-            },
-            method:"POST",
-            body:JSON.stringify(userInfo)
-            
-        })
-        .then((response) => response.json())
-        .then((data) => {
-            
-            console.log(data);
-            if (data.accessToken) {
-                alert("Dang nhap thanh cong");
-                localStorage.setItem("user", JSON.stringify(userInfo));
-                window.location.href = "/";
-            } else {
-                alert("Dang nhap that bai")
-            }
-        }).catch((error) => {
-            console.log(error);
-        })
+        const data = await login (userInfo);
+        if (data.accessToken){
+            localStorage.setItem("user", JSON.stringify({
+                email:userInfo.email,
+                accessToken: data.accessToken
+            }));
+            alert("Dang nhap thanh cong!");
+            router.navigate("/task")
+        }
 
     });
 

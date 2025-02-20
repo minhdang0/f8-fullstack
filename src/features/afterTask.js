@@ -13,22 +13,29 @@ function afterTask() {
 
     function renderTasks(tasks) {
         const taskList = document.getElementById('task-list');
+        console.log(tasks);
         taskList.innerHTML = '';
+        if (!tasks || tasks.length === 0) {
+            taskList.innerHTML += `<tr>
+                                    <td colspan="5">No task</td>
+                                  </tr>`;
+            return;
+        } 
+        let taskRows = tasks.map((task, index) => `
+        <tr style="background-color: ${task.status === 'done' ? 'yellowgreen' : '#fff'}">
+            <td>${index + 1}</td>
+            <td>${task.title}</td>
+            <td>${task.status}</td>
+            <td>${task.priority}</td>
+            <td>
+                <button onclick="editTask('${task.id}')">Edit</button>
+                <button onclick="deleteTask('${task.id}')">Delete</button>
+            </td>
+        </tr>
+         `).join('');
 
-        tasks.forEach((task,index) => {
-            taskList.innerHTML += `
-                <tr style="background-color: ${task.status === 'done' ? 'yellowgreen' : '#fff'}">
-                    <td>${index +1}</td>
-                    <td>${task.title}</td>
-                    <td>${task.status}</td>
-                    <td>${task.priority}</td>
-                    <td>
-                        <button onclick="editTask('${task.id}')">Edit</button>
-                        <button onclick="deleteTask('${task.id}')">Delete</button>
-                    </td>
-                </tr>
-            `;
-        });
+        taskList.innerHTML += taskRows;
+           
     }
     function filterTask() {
         const statusElement = document.getElementById("status").value;
@@ -75,7 +82,7 @@ function afterTask() {
             headers: { 'Authorization': `Bearer ${TOKEN}` }
         }).then(response => response.json())
         .then(task => {
-            openTaskModal();
+            openTaskModal(task);
             editingTaskId = task.id;
             
             document.getElementById('task-title').value = task.title;
@@ -106,20 +113,48 @@ function afterTask() {
         });
     }
 
-    function deleteTask(taskId) {
-        fetch(`${API_URL}/${taskId}`, {
-            method: 'DELETE',
-            headers: { 'Authorization': `Bearer ${TOKEN}` }
-        })
-        .then(() => fetchTasks());
+    async function deleteTask(taskId) {
+        const isConfirm = confirm("Ban muon xoa task nay khong?");
+        console.log(taskId);
+        if(!isConfirm) {
+            return;
+        }
+        try {
+            const response = await fetch(`${API_URL}/${taskId}`, {
+                method: 'DELETE',
+                headers: { 'Authorization': `Bearer ${TOKEN}` }
+            })
+            if (!response.ok) {
+                throw new Error(`Loi: ${response.status}`)
+            }  
+            alert("Xoa task thanh cong")   ;
+            fetchTasks();
+        }catch(error) {
+            console.log(error);
+        }
+       
     }
 
-    function openTaskModal() {
+    function openTaskModal(task = null) {
         document.getElementById('task-modal').style.display = 'block';
-        document.getElementById('task-title').value = "";
-        document.getElementById('task-status').value = "";
-        document.getElementById('task-priority').value = "";
-        editingTaskId = null; 
+        const titleInput = document.getElementById('task-title');
+        const statusInput = document.getElementById('task-status');
+        const priorityInput = document.getElementById('task-priority');
+
+        if (task) {
+            editingTaskId = task.id ;
+            titleInput.value = task.title;
+            statusInput.value = task.status;
+            priorityInput.value = task.priority;
+            statusInput.disabled = false; 
+        } else {
+            editingTaskId = null;
+            titleInput.value = "";
+            statusInput.value = "todo";
+            priorityInput.value = "";
+            statusInput.disabled = true; 
+        }
+
     }
 
     function closeTaskModal() {
@@ -143,7 +178,7 @@ function afterTask() {
         filterTask();
     })
     fetchTasks();
-
+    
     window.closeTaskModal = closeTaskModal;
     window.deleteTask = deleteTask;
     window.editTask = editTask;

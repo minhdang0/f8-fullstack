@@ -26,7 +26,9 @@ function manageTask () {
                     <th width="13%">Actions</th>
                 </tr>
             </thead>
-            <tbody id="task-list"></tbody>
+            <tbody id="task-list">
+            
+            </tbody>
         </table>
     </div>
     <div id="task-modal" class="modal">

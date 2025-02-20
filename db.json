@@ -2,21 +2,9 @@
   "tasks": [
     {
       "title": "cong viec 1",
-      "status": "doing",
-      "priority": "1",
-      "id": 1
-    },
-    {
-      "title": "cong viec 2",
-      "status": "done",
-      "priority": "2",
-      "id": 2
-    },
-    {
-      "title": "cong viec 3",
       "status": "todo",
-      "priority": "1",
-      "id": 3
+      "priority": "2",
+      "id": 4
     }
   ],
   "users": [
@@ -29,6 +17,41 @@
       "email": "user1q0@gmail.com",
       "password": "$2a$10$t/Zw4CA.xsRoFJbGF8Pl7.KIhmZqTZc4kEZd/F9iysmaJY8oz9jza",
       "id": 2
+    },
+    {
+      "email": "user101@gmail.com",
+      "password": "$2a$10$pLeJAf5z.zDi2AWjbz4EdeMXyINbJ9DcZB2q2xwrUl4MoHukRhf7q",
+      "id": 3
+    },
+    {
+      "email": "user102@gmail.com",
+      "password": "$2a$10$4g/YGn3PXZ1IIWU8S9mHD.F1Dexlm3gd4NU1T72fxuttkIxvleOR6",
+      "id": 4
+    },
+    {
+      "email": "user103@gmail.com",
+      "password": "$2a$10$QXZc4qfbJc8gQ/qPQ3Xn1uR0EaCZ71oGjJegb03CkmxIq4XxjIHHu",
+      "id": 5
+    },
+    {
+      "email": "user1000@gmail.com",
+      "password": "$2a$10$7bqohtlR2eluapTcuVTuMuVYOTXVwKLuMlf3MJpcfLrbChOGJ2afW",
+      "id": 6
+    },
+    {
+      "email": "user20@gmail.com",
+      "password": "$2a$10$8ZMwIdxMSd5mmbBzffOICOWQ2zeSOlQ0QMaembBPbkxZ.qpHkq.Uq",
+      "id": 7
+    },
+    {
+      "email": "minh77@gmail.com",
+      "password": "$2a$10$ToxYawdVlUPWzAZ0F3trneB9TeMagT1zKpQdhmQq/cvdl3/zBNwla",
+      "id": 8
+    },
+    {
+      "email": "user10100@gmail.com",
+      "password": "$2a$10$fhOFILwQv9X0SZnifTcMs.RypYaSfOU9ZKOMOMDoBDwC8AXX2tCqq",
+      "id": 9
     }
   ]
 }
